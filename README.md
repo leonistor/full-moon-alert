@@ -25,3 +25,12 @@ https://en.wikipedia.org/wiki/File:FullMoon2010.jpg
 
 moon_full_20110319_rolf-hempel.jpg
 http://www.planetary.org/multimedia/space-images/earth/full-moon-enhanced-color.html# full-moon-alert
+
+## Fonts
+
+Work Sans: http://weiweihuanghuang.github.io/Work-Sans/
+
+## Icons
+
+https://www.ikonate.com/
+
