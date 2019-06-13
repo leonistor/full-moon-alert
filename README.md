@@ -1,6 +1,9 @@
 
 # Moon phases app
 
+## Flutter app
+
+`flutter create --description 'Full Moon Alert' --org 'com.leonistor' --ios-language swift --android-language kotlin --project-name 'full_moon_alert' full_moon_alert`
 
 
 ## Algorithms
@@ -33,4 +36,6 @@ Work Sans: http://weiweihuanghuang.github.io/Work-Sans/
 ## Icons
 
 https://www.ikonate.com/
+
+
 
