@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:full_moon_alert/app_icons.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 void main() => runApp(FullMoonApp());
 
@@ -15,6 +15,23 @@ class FullMoonApp extends StatelessWidget {
     );
   }
 }
+
+const String _markdownAboutData = """
+# Full Moon Alert
+
+Markdown allows you to easily include formatted text, images, and even formatted Dart code in your app.
+
+## Styling
+Style text as _italic_, __bold__, or `inline code`.
+- Use bulleted lists
+- To better clarify
+- Your points
+
+## Links
+You can use [Google](https://www.google.com) in markdown
+
+Enjoy!
+""";
 
 class StartPage extends StatelessWidget {
   final _thinBorder = BorderSide(
@@ -107,7 +124,8 @@ class StartPage extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: Center(
-                      child: Text('ana are mere'),
+                      // child: Text('ana are mere'),
+                      child: Markdown(data: _markdownAboutData),
                     ),
                   ),
                   Container(
