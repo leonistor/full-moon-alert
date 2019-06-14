@@ -14,12 +14,12 @@ class FullMoonApp extends StatelessWidget {
   }
 }
 
-const _thinBorder = BorderSide(
-  color: Colors.grey,
-  width: 2.0,
-);
-
 class StartPage extends StatelessWidget {
+  final _thinBorder = BorderSide(
+    color: Colors.grey[500],
+    width: 2.0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +105,7 @@ class StartPage extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-                color: Colors.deepOrange,
+                color: Colors.black,
                 border: Border(
                   top: _thinBorder,
                   right: _thinBorder,
@@ -126,7 +126,7 @@ class StartPage extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-                color: Colors.teal,
+                color: Colors.grey[800],
                 border: Border(
                   top: _thinBorder,
                 )),
