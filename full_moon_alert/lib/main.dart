@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:full_moon_alert/app_icons.dart';
 
 void main() => runApp(FullMoonApp());
@@ -88,7 +89,52 @@ class StartPage extends StatelessWidget {
     );
   }
 
-  void _handleInfo(BuildContext context) {}
+  void _handleInfo(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          final screenSize = MediaQuery.of(context).size;
+          return Dialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            ),
+            backgroundColor: Colors.grey[50],
+            child: Container(
+              height: screenSize.height * 0.6,
+              width: screenSize.width * 0.8,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Expanded(
+                    child: Center(
+                      child: Text('ana are mere'),
+                    ),
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[800],
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(5.0),
+                        bottomRight: Radius.circular(5.0),
+                      ),
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.check),
+                      color: Colors.white,
+                      iconSize: 32.0,
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
 
   void _handleAlert() {
     print('pressed alert');
