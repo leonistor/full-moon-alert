@@ -37,6 +37,9 @@ Work Sans: http://weiweihuanghuang.github.io/Work-Sans/
 
 http://fluttericon.com/
 
+## TODO
 
-
-
+[ ] Resize text with MediaQuery
+[ ] Tests
+[ ] Web site with Disqus
+[ ] Promotion

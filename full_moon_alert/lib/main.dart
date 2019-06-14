@@ -63,7 +63,7 @@ class StartPage extends StatelessWidget {
           ),
           Expanded(
             flex: 1,
-            child: _buttons(),
+            child: _buttons(context),
           ),
         ],
       ),
@@ -88,15 +88,13 @@ class StartPage extends StatelessWidget {
     );
   }
 
-  void _handleInfo() {
-    print('pressed Info');
-  }
+  void _handleInfo(BuildContext context) {}
 
   void _handleAlert() {
     print('pressed alert');
   }
 
-  Widget _buttons() {
+  Widget _buttons(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
@@ -109,7 +107,7 @@ class StartPage extends StatelessWidget {
                   AppIcons.info,
                   color: Colors.white,
                 ),
-                onPressed: _handleInfo,
+                onPressed: () => _handleInfo(context),
               ),
               decoration: BoxDecoration(
                   color: Colors.black,
