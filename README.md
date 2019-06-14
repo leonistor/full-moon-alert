@@ -21,7 +21,7 @@ Moon_movie.gif
 https://aa.usno.navy.mil/faq/docs/moon_phases.php
 convert to frames
 (graphicsmagick)
-/usr/local/bin/gm convert movie.gif -coalesce +adjoin moon_phase%02d.png
+`/usr/local/bin/gm convert movie.gif -coalesce +adjoin moon_phase%02d.png`
 
 
 https://en.wikipedia.org/wiki/File:FullMoon2010.jpg
@@ -35,7 +35,8 @@ Work Sans: http://weiweihuanghuang.github.io/Work-Sans/
 
 ## Icons
 
-https://www.ikonate.com/
+http://fluttericon.com/
+
 
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:full_moon_alert/app_icons.dart';
 
 void main() => runApp(FullMoonApp());
 
@@ -80,11 +81,19 @@ class StartPage extends StatelessWidget {
           ),
           TextSpan(
             text: info,
-            style: TextStyle(fontWeight: FontWeight.w500),
+            style: TextStyle(fontWeight: FontWeight.w400),
           ),
         ],
       ),
     );
+  }
+
+  void _handleInfo() {
+    print('pressed Info');
+  }
+
+  void _handleAlert() {
+    print('pressed alert');
   }
 
   Widget _buttons() {
@@ -93,43 +102,42 @@ class StartPage extends StatelessWidget {
       children: <Widget>[
         Expanded(
           flex: 1,
-          child: Container(
-            child: Center(
-              child: Text(
-                'About',
-                style: TextStyle(
+          child: SizedBox.expand(
+            child: Container(
+              child: IconButton(
+                icon: Icon(
+                  AppIcons.info,
                   color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w500,
                 ),
+                onPressed: _handleInfo,
               ),
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  border: Border(
+                    top: _thinBorder,
+                    right: _thinBorder,
+                  )),
             ),
-            decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border(
-                  top: _thinBorder,
-                  right: _thinBorder,
-                )),
           ),
         ),
         Expanded(
           flex: 1,
-          child: Container(
-            child: Center(
-              child: Text(
-                'Set Alert',
-                style: TextStyle(
+          child: SizedBox.expand(
+            child: Container(
+              child: IconButton(
+                icon: Icon(
+                  AppIcons.bell,
                   color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w500,
                 ),
+                onPressed: _handleAlert,
               ),
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  border: Border(
+                    top: _thinBorder,
+                    // right: _thinBorder,
+                  )),
             ),
-            decoration: BoxDecoration(
-                color: Colors.grey[800],
-                border: Border(
-                  top: _thinBorder,
-                )),
           ),
         ),
       ],
